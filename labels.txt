@@ -1,0 +1,5 @@
+0 Acne and Rosacea 
+1 Actinic Keratosis
+2 Psoriasis
+3 Seborrheic Keratoses
+4 Eczema
