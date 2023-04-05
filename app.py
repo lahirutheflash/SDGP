@@ -2,8 +2,11 @@ from flask import Flask, request, jsonify
 from keras.models import load_model
 import cv2
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 
 # Load the model and labels
 model = load_model("keras_Model.h5", compile=False)
