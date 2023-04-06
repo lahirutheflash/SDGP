@@ -17,6 +17,8 @@ def predict():
     # Get the image file from the request
     image_file = request.files["image"]
 
+    print(image_file)
+
     # Read the image file
     image = cv2.imdecode(np.frombuffer(image_file.read(), np.uint8), cv2.IMREAD_COLOR)
 
@@ -36,7 +38,7 @@ def predict():
     confidence_score = float(prediction[0][index])
 
     # Return the prediction and confidence score as a JSON response
-    return jsonify({"class": class_name, "confidence": confidence_score})
+    return jsonify({"class": class_name, "confidence": confidence_score}),200
 
 if __name__ == "__main__":
     app.run(debug=True)
